@@ -12,7 +12,6 @@ export class OrdersComponent extends PageTemplate implements OnInit {
          .setDescription('Esta é uma página de teste')
          .setMetas([
             { name: 'keywords', content: 'home, home page, página inicial' },
-            { name: 'og:title', content: this.title }
           ])
          .make()
   }
