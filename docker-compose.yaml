@@ -1,0 +1,18 @@
+version: "3.8"
+
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile.development
+    ports:
+      - 4200:4200
+    volumes:
+      - .:/usr/src/app
+      - node_modules:/usr/src/app/node_modules
+
+volumes:
+  node_modules:
+networks:
+    angular-network:
+      driver: bridge
